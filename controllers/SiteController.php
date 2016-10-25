@@ -16,6 +16,8 @@ use app\models\ContactForm;
 
 class SiteController extends Controller
 {
+    const GROUP_DOCTOR = 'DOCTOR';
+    const GROUP_PATIENT = 'PATIENT';
     /**
      * @inheritdoc
      */
