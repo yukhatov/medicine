@@ -7,15 +7,13 @@
  */
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use app\models\Doctor;
 use app\models\User;
-use app\models\Role;
 ?>
 
 <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'doctor')->label('Doctor:')->dropdownList(
-            User::find()->select(['name'])->indexBy('userId')->where(['group' => 'DOCTOR'])->column(),
+            User::find()->select(['name'])->joinWith('doctor')->indexBy('doctorId')->where(['group' => 'DOCTOR'])->column(),
             ['prompt'=>'Select Doctor']
         ) ?>
 

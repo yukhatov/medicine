@@ -30,14 +30,14 @@ $this->title = 'My Yii Application';
                         if($visit->isActive)
                         {
                             echo '<div class="panel panel-default">';
-                            echo '<div class="panel-heading">' . $visit->date  . ' <a class="btn btn-warning" href="index.php?r=patient/visit-status&id='. $visit->visitId .'&status=0">Cancel</a></div>';
+                            echo '<div class="panel-heading">' . $visit->date  . ' <a class="btn btn-warning" href="index.php?r=visit/visit-status&id='. $visit->visitId .'&status=0">Cancel</a></div>';
                             echo '<div class="panel-body">';
                                 echo '<p>' . $visit->comment . '</p>';
                             echo '</div>';
                             echo '</div>';
                         }else{
                             echo '<div class="panel panel-default">';
-                            echo '<div class="panel-heading">' . $visit->date  . ' <a class="btn btn-success" href="index.php?r=patient/visit-status&id='. $visit->visitId .'&status=1">Approve</a></div>';
+                            echo '<div class="panel-heading">' . $visit->date  . ' <a class="btn btn-success" href="index.php?r=visit/visit-status&id='. $visit->visitId .'&status=1">Approve</a></div>';
                             echo '<div class="panel-body">';
                                 echo '<p>' . $visit->comment . '</p>';
                             echo '</div>';

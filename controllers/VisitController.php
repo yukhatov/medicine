@@ -63,7 +63,7 @@ class VisitController extends Controller
     {
         Visit::setStatus(Yii::$app->request->get()['id'], Yii::$app->request->get()['status']);
 
-        return $this->redirect('index.php?r=patient');
+        return $this->goHome();
     }
 
     public function actionEditComment()

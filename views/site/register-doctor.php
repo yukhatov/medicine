@@ -7,9 +7,6 @@
  */
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use app\models\Doctor;
-use app\models\User;
-use app\models\Role;
 ?>
 
 <?php $form = ActiveForm::begin(); ?>
